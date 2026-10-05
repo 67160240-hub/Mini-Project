@@ -16,3 +16,6 @@ Dashboard เชิงเล่าเรื่องสำหรับ AutoLink 
 นาย อภิชา วงค์กลาง — 67160240
 
 เปิด `dashboard/index.html` เพื่อดู Dashboard
+## Dashboard Preview
+
+![AutoLink Dashboard](dashboard-preview.png)
