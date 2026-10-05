@@ -18,4 +18,4 @@ Dashboard เชิงเล่าเรื่องสำหรับ AutoLink 
 เปิด `dashboard/index.html` เพื่อดู Dashboard
 ## Dashboard Preview
 
-![AutoLink Dashboard](dashboard-preview.png)
+![AutoLink Dashboard](AutoLink.png)
