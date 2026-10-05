@@ -1,0 +1,21 @@
+﻿Product_ID,Product_Name,Category,Compatible_Brand,Unit_Price,Stock,Supplier
+P001,Brake Pad,Brake,Toyota,850.0,41,AutoTech Supply
+P002,Brake Disc,Brake,Honda,1650.0,88,ProCar Distribution
+P003,Car Battery,Electrical,Toyota,2800.0,44,ProCar Distribution
+P004,Air Filter,Engine,Toyota,450.0,76,Thai Parts Supply
+P005,Spark Plug,Engine,Honda,320.0,64,OEM Auto Parts
+P006,Ball Joint,Suspension,Isuzu,1250.0,85,ProCar Distribution
+P007,Shock Absorber,Suspension,Toyota,2200.0,99,ProCar Distribution
+P008,Radiator,Cooling,Isuzu,3500.0,65,Thai Parts Supply
+P009,Starter Motor,Electrical,Honda,4200.0,19,Thai Parts Supply
+P010,AC Compressor,AC,Toyota,5800.0,64,OEM Auto Parts
+P011,Brake Fluid,Brake,Nissan,280.0,49,Thai Parts Supply
+P012,Oil Filter,Engine,Nissan,250.0,15,Thai Parts Supply
+P013,Alternator,Electrical,Toyota,4800.0,22,Thai Parts Supply
+P014,Clutch Set,Engine,Isuzu,3900.0,90,OEM Auto Parts
+P015,Radiator Hose,Cooling,Honda,650.0,25,ProCar Distribution
+P016,AC Filter,AC,Toyota,380.0,17,ProCar Distribution
+P017,Wheel Bearing,Suspension,Honda,1450.0,56,ProCar Distribution
+P018,Fuel Pump,Engine,Toyota,2700.0,59,Thai Parts Supply
+P019,Headlight,Electrical,Isuzu,1800.0,63,Thai Parts Supply
+P020,Wiper Blade,Exterior,Nissan,420.0,20,OEM Auto Parts
