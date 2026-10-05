@@ -1,0 +1,41 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8">
+<title>AutoLink Business Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body{margin:0;background:#f3f6fa;font-family:Arial,sans-serif;color:#10213b}
+header{background:#0d2b5b;color:white;padding:28px 40px} header h1{margin:0 0 8px}
+main{max-width:1200px;margin:auto;padding:24px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.card{background:white;border-radius:15px;padding:20px;margin-bottom:18px;box-shadow:0 3px 12px #0001}
+.kpi{font-size:28px;font-weight:bold;color:#1264db}.small{color:#68758a}
+.grid{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+.insight{background:#eef6ff;border-left:5px solid #1769e0;padding:14px;margin:10px 0;border-radius:8px}
+@media(max-width:800px){.kpis,.grid{grid-template-columns:1fr}}
+</style></head><body>
+<header><h1>AutoLink — Automotive Parts Business Dashboard</h1>
+<div>วิเคราะห์ยอดขาย ความต้องการอะไหล่ และโอกาสในการใช้ AI</div></header><main>
+<div class="kpis">
+<div class="card"><div class="small">ยอดขายสุทธิ</div><div class="kpi">฿6,996,142</div></div>
+<div class="card"><div class="small">จำนวนคำสั่งซื้อ</div><div class="kpi">1,800</div></div>
+<div class="card"><div class="small">ลูกค้าที่ซื้อ</div><div class="kpi">249</div></div>
+<div class="card"><div class="small">ยอดซื้อเฉลี่ย / Order</div><div class="kpi">3,887</div></div></div>
+<div class="grid"><div class="card"><h2>ยอดขายรายเดือน</h2><canvas id="m"></canvas></div>
+<div class="card"><h2>ยอดขายตามประเภทอะไหล่</h2><canvas id="c"></canvas></div></div>
+<div class="grid"><div class="card"><h2>Top 10 อะไหล่</h2><canvas id="p"></canvas></div>
+<div class="card"><h2>ยอดขายตามช่องทาง</h2><canvas id="ch"></canvas></div></div>
+<div class="grid"><div class="card"><h2>ยอดขายตามกลุ่มลูกค้า</h2><canvas id="ct"></canvas></div>
+<div class="card"><h2>Business Insight</h2>
+<div class="insight"><b>1. สินค้าขายดี</b><br>ใช้ข้อมูล Top 10 เพื่อวางแผน Stock และโปรโมชั่น</div>
+<div class="insight"><b>2. ช่องทางขาย</b><br>เพิ่มงบให้ช่องทางที่สร้างยอดขายสูง</div>
+<div class="insight"><b>3. AI Opportunity</b><br>นำข้อมูลการค้นหาไปพัฒนาระบบ AI Recommendation</div></div></div>
+</main><script>
+const ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"]ABELS=["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"],[814072.5, 759131.5, 888541.5, 899907.0, 770489.5, 775726.0, 688282.5, 788080.0, 611912.0]ATA=[814072.5, 759131.5, 888541.5, 899907.0, 770489.5, 775726.0, 688282.5, 788080.0, 611912.0];
+const ["AC Compressor", "Clutch Set", "Alternator", "Starter Motor", "Radiator", "Fuel Pump", "Car Battery", "Shock Absorber", "Headlight", "Brake Disc"]ABELS=["AC Compressor", "Clutch Set", "Alternator", "Starter Motor", "Radiator", "Fuel Pump", "Car Battery", "Shock Absorber", "Headlight", "Brake Disc"],[1056760.0, 806715.0, 741120.0, 674520.0, 565600.0, 539730.0, 498820.0, 442640.0, 301230.0, 283305.0]ATA=[1056760.0, 806715.0, 741120.0, 674520.0, 565600.0, 539730.0, 498820.0, 442640.0, 301230.0, 283305.0];
+const ["Electrical", "Engine", "AC", "Suspension", "Cooling", "Brake", "Exterior"]ABELS=["Electrical", "Engine", "AC", "Suspension", "Cooling", "Brake", "Exterior"],[2215690.0, 1524557.0, 1113494.0, 925312.5, 684030.0, 465124.0, 67935.0]ATA=[2215690.0, 1524557.0, 1113494.0, 925312.5, 684030.0, 465124.0, 67935.0];
+const ["Website", "Mobile App", "Line OA", "Marketplace", "Facebook"]ABELS=["Website", "Mobile App", "Line OA", "Marketplace", "Facebook"],[1887424.5, 1809104.0, 1189850.0, 1170294.0, 939470.0]ATA=[1887424.5, 1809104.0, 1189850.0, 1170294.0, 939470.0];
+const ["เจ้าของรถ", "อู่ซ่อมรถ", "ร้านอะไหล่", "ศูนย์บริการ"]ABELS=["เจ้าของรถ", "อู่ซ่อมรถ", "ร้านอะไหล่", "ศูนย์บริการ"],[3976883.5, 1486745.0, 1011375.5, 521138.5]ATA=[3976883.5, 1486745.0, 1011375.5, 521138.5];
+new Chart(m,{type:'line',data:{labels:["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"]ABELS,datasets:[{label:'Net Sales',data:[814072.5, 759131.5, 888541.5, 899907.0, 770489.5, 775726.0, 688282.5, 788080.0, 611912.0]ATA,tension:.3}]}});
+new Chart(c,{type:'doughnut',data:{labels:["Electrical", "Engine", "AC", "Suspension", "Cooling", "Brake", "Exterior"]ABELS,datasets:[{data:[2215690.0, 1524557.0, 1113494.0, 925312.5, 684030.0, 465124.0, 67935.0]ATA}]}});
+new Chart(p,{type:'bar',data:{labels:["AC Compressor", "Clutch Set", "Alternator", "Starter Motor", "Radiator", "Fuel Pump", "Car Battery", "Shock Absorber", "Headlight", "Brake Disc"]ABELS,datasets:[{label:'Net Sales',data:[1056760.0, 806715.0, 741120.0, 674520.0, 565600.0, 539730.0, 498820.0, 442640.0, 301230.0, 283305.0]ATA}]},options:{indexAxis:'y'}});
+new Chart(ch,{type:'bar',data:{labels:["Website", "Mobile App", "Line OA", "Marketplace", "Facebook"]ABELS,datasets:[{label:'Net Sales',data:[1887424.5, 1809104.0, 1189850.0, 1170294.0, 939470.0]ATA}]}});
+new Chart(ct,{type:'doughnut',data:{labels:["เจ้าของรถ", "อู่ซ่อมรถ", "ร้านอะไหล่", "ศูนย์บริการ"]ABELS,datasets:[{data:[3976883.5, 1486745.0, 1011375.5, 521138.5]ATA}]}});
+</script></body></html>
